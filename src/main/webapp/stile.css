@@ -1,0 +1,998 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300;400;700&display=swap');
+*{
+    box-sizing: border-box;
+}
+@media screen and (max-width: 600px) {
+    #menu a {
+        float: none;
+        width: 100%;
+
+    }
+}
+
+/*tutti body tutto sfondo con font*/
+body{
+    margin: 0;
+    font-family: 'Exo-2',sans-serif;
+}
+
+/* barra di ricerca */
+.search form{
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    padding: 8px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #11468F;
+    color: #f0f6fd;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #040E3B;
+}
+
+/*barra navigazione*/
+/*
+nav {
+    background-color: #DA1212;
+    margin: 10px 10px 0px 10px;
+}
+
+nav ul {
+    margin:0px;
+    list-style-type: none;
+    padding: 5px 0px 5px 0px;
+}
+nav ul li{
+    display: inline;
+    padding: 5px 10px 5px 10px;
+}
+
+nav ul li a:link,nav ul li a:visited {
+    color: blue;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+nav ul li.selected
+{
+    background-color: aliceblue;
+}
+*/
+/*header rosso*/
+.header{
+    margin: 0;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#C41010 ;
+    color: #EEEEEE;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    height: 40px;
+}
+
+/* il terzo figlio di header rosso (location unisa)*/
+.header h3:nth-child(2){
+    padding-right: 125px;
+}
+
+/*la barra blu con logo navigazione e icone*/
+.nav{
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #11468F ;
+    color: #EEEEEE;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    height: 115px;
+}
+
+/*logo header*/
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*(header) form ricerca*/
+.search form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    border: none;
+}
+
+/*tutto il div della ricerca*/
+.search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*pulsante nella barra ricerca*/
+.search form button{
+    background: none;
+    border: none;
+    color: #EEEEEE;
+}
+/*barra ricerca*/
+.search form input{
+    padding: 8px;
+    margin-bottom: 0;
+}
+
+/*icone nell'header blu*/
+.fa-location-dot{
+    margin-right: 10px; /*distanzio pin con unisa*/
+}
+
+.fa-circle-user{
+    padding: 0 20px 0 0;
+}
+
+.fa-basket-shopping{
+    margin-right: 20px; /*distanzio carrello da omino*/
+}
+
+/*tutte le icone fa solid*/
+.fa-solid{
+    font-size: 25px;
+    color: #EEEEEE;
+}
+
+/*immagine nella home*/
+.pub{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+}
+
+/*immagine nella home*/
+.banner{
+    margin-top: 60px;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border: 7px solid #040E3B;
+    border-style: groove;
+}
+
+/**sfondo a quasi tutte le pagine salvavita **/
+.sfondo{
+    background-image: url("Immagini/op17.png");
+    background-repeat: space;
+    margin: 0;
+}
+
+/**(index) descrizione sito **/
+.nostro{
+    margin: 100px;
+    text-align: center;
+}
+.nostro h1{
+    color: #11468F;
+    text-shadow: -1px 0 #EEEEEE, 0 1px #EEEEEE, 1px 0 #EEEEEE, 0 -1px #EEEEEE;
+    font-weight: bolder;
+}
+.nostro h2{
+    color: #040E3B;
+    text-shadow: -1px 0 #EEEEEE, 0 1px #EEEEEE, 1px 0 #EEEEEE, 0 -1px #EEEEEE;
+    font-weight: bolder;
+}
+
+ .descrizione{ /* DESCRIZIONE INSERIMEMTNO PRODOTTO*/
+     margin: 20px 20px;
+     padding: 20px 20px;
+     border-radius: 20px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+     background-color: #e0e0e0;
+     height: 200px;
+ }
+
+
+/*(header) menu bibite ecc*/
+#menu{
+    margin: 0;
+    padding: 0 10px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #DA1212 /*#0f3f80*/;
+    color: #EEEEEE;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+}
+
+#menu a{/*link (compreso sia quando link che visited)*/
+    color: #EEEEEE;
+    text-decoration: none; /*tolgo la linea  sotto il link*/
+    display: block;
+    padding: 10px 20px; /*distanzio le categorie con 20 e top/down con 10*/
+}
+
+#menu a:hover{ /*quando passo sul ink*/
+    color: #DA1212;
+    text-decoration: none; /*tolgo la linea bruttissima sotto il link*/
+    background-color: #EEEEEE;
+}
+
+
+/*(login.jsp) login e registrazione*/
+.due{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url("Immagini/op10.png");
+    background-repeat: space;
+}
+
+/*blocco login*/
+.login{
+    width: 500px;
+    margin: 150px;
+    padding: 50px;
+    border: 2px solid #11468F;
+    border-radius: 5px;
+    background-color: #f0f6fd;
+    color: #040E3B;
+}
+
+/*blocco registrazione*/
+.reg{
+    width: 500px;
+    margin: 150px;
+    padding:70px;
+    border: 2px solid #DA1212;
+    border-radius: 5px;
+    background-color: #feeded;
+    color: #54070B;
+    font-weight: bold;
+}
+
+/*link per andare a registration form*/
+.reg a{
+    color: #54070B;
+}
+
+.reg a:hover{
+    padding: 5px 5px;
+    color: #feeded;
+    text-decoration: none;
+    background-color: #54070B;
+}
+/*bottone per accedere*/
+.bottone, #button{
+    background-color: #11468F;
+}
+
+#button:hover{
+    background-color: #040E3B;
+}
+
+/*controllo password*/
+
+#ProgressBar {
+    width: 100%;
+    background-color: #ddd;
+    max-width:300px;
+}
+#bar {
+    width: 1%;
+    height: 10px;
+    background-color: #4CAF50;
+    max-width:300px;
+}
+#password {
+    width:300px;
+    padding:5px;
+    text-align:center;
+}
+#alert {
+    font-weight:bold;
+    text-align:center;
+}
+
+/**reg form**/
+.registrazione{
+    width: 600px;
+    padding: 50px;
+    border: 2px solid #11468F;
+    border-radius: 5px;
+    background-color: #f0f6fd;
+    color: #040E3B;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 400px;
+}
+
+#registrati{
+    margin: 10px 10px 10px 0px;
+    background-color: #040E3B;
+    color: #f0f6fd;
+    font-size: large;
+    font-weight: bold;
+}
+
+.registrazione input{
+    border: 1px solid #11468F;
+    border-radius: 3px;
+}
+
+
+/*(index) prende le 3 categorie*/
+.sections{
+    margin: 100px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*le 3 categorie*/
+
+.sections img {
+    width: 100%;
+    height: auto;
+    /*opacity: 0.3;*/
+}
+
+.sections h3{
+    color: #040E3B;
+    font-weight: bolder;
+    text-shadow: -1px 0 #EEEEEE, 0 1px #EEEEEE, 1px 0 #EEEEEE, 0 -1px #EEEEEE; /* sinistra sotto destra sopra*/
+    font-size: 24px;
+
+}
+
+.sections h3:hover{
+    color: #C41010;
+    font-weight: bolder;
+    text-shadow: -1px 0 #EEEEEE, 0 1px #EEEEEE, 1px 0 #EEEEEE, 0 -1px #EEEEEE;
+    font-size: 24px;
+}
+
+/**CATEGORIE PRODOTTI**/
+.prodotti{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.prodotti img{
+    width: 100%;
+    height: auto;
+    padding: 80px 80px 20px 80px;
+}
+
+/*link sulle categorie */
+.salati {
+    position: relative;
+}
+.dolci {
+    position: relative;
+}
+.bevande {
+    position: relative;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/*Immagini categorie?*/
+.immagine1 {
+    display:block;
+    opacity: 0.4;
+}
+.immagine2{
+    opacity: 1.0;
+    display: none;
+}
+
+.cambioimmagine:hover .immagine1{
+    display: none;
+}
+
+.cambioimmagine:hover .immagine2{
+    display: block;
+
+}
+
+.products{ /**prodotti nelle categorie**/
+    border: 2px solid #11468F;
+    border-radius: 5px;
+    background-color: #f0f6fd;
+    color: #040E3B;
+    margin: 10px;
+    padding: 10px;
+}
+
+/**bottone prodotti per aggiunta al carrello **/
+.aggcarrello{
+    background-color: #f2f2f2;
+    color: #040E3B;
+    padding: 3px;
+}
+
+.aggcarrello i{
+    color: #040E3B;
+}
+
+
+/**PAGINA ACCOUNT**/
+.divisione{
+    display: flex;
+    flex-direction: row;
+}
+
+.blu{ /**informazioni account e logout*/
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-content: center;
+
+}
+
+.pagaccount{ /**PAGINA con dati account**/
+    border: 4px solid #11468F;
+    border-radius: 5px;
+    background-color: #f0f6fd;
+    color: #040E3B;
+    padding: 10px 40px 10px 40px;
+    margin: 50px;
+    width: 500px;
+
+}
+
+.logout{ /**div per logout**/
+    border: 4px solid #11468F;
+    border-radius: 5px;
+    background-color: #f0f6fd;
+    color: #040E3B;
+    font-weight: bold;
+    margin: 50px;
+    padding: 10px 40px 10px 40px;
+    width: 500px;
+}
+
+#esci{
+    color: #040E3B;
+}
+
+#esci:hover{
+    color: #11468F;
+    text-decoration: none;
+
+}
+
+.rossi{ /**metodi pagamenti salvati, ordini passati e admin**/
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin:20px;
+    align-content: center;
+}
+
+
+.pagamento{ /**metodi pagamenti salvati**/
+    border: 4px solid #C41010;
+    border-radius: 5px;
+    background-color: #feeded;
+    color: #54070B;
+    font-weight: bold;
+    margin: 50px;
+    padding: 10px 40px 10px 40px;
+    width: 500px;
+}
+
+
+#mostrapagamenti{
+    color: #54070B;
+}
+
+#mostrapagamenti:hover{
+    color: #C41010;
+    text-decoration: none;
+}
+
+.ordini{ /**ordini passati**/
+    border: 4px solid #C41010;
+    border-radius: 5px;
+    background-color: #feeded;
+    color: #54070B;
+    font-weight: bold;
+    margin: 50px;
+    padding: 10px 40px 10px 40px;
+    width: 500px;
+}
+
+#mostraordini{
+    color: #54070B;
+}
+
+#mostraordini:hover{
+    color: #C41010;
+    text-decoration: none ;
+}
+
+.aggiunta{ /**aggiungi prodotto**/
+    border: 4px solid #C41010;
+    border-radius: 5px;
+    background-color: #feeded;
+    color: #54070B;
+    font-weight: bold;
+    margin: 50px;
+    padding: 10px 40px 10px 40px;
+    width: 500px;
+}
+
+#aggiungiprodotto{
+    color: #54070B;
+}
+
+#aggiungiprodotto:hover{
+    color: #C41010;
+    text-decoration: none;
+}
+
+
+.rimozione{ /**togli prodotto**/
+    border: 4px solid #C41010;
+    border-radius: 5px;
+    background-color: #feeded;
+    color: #54070B;
+    font-weight: bold;
+    margin: 50px;
+    padding: 10px 40px 10px 40px;
+    width: 500px;
+}
+
+#rimuoviprodotto{
+    color: #54070B;
+}
+
+#rimuoviprodotto:hover{
+    color: #C41010;
+    text-decoration: none;
+}
+
+
+/**ordine compiuto **/
+.ordineok .fa-envelope-circle-check{
+    color: #54070B;
+    font-size: 50px;
+}
+
+.ordineok{
+    width: 600px;
+    border: 5px solid #C41010;
+    border-radius: 5px;
+    background-color: #feeded;
+    color: #54070B;
+    margin: 40px 40px 40px 450px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.ordineok a,a:hover{
+    color: #DA1212;
+    text-decoration: none; /*tolgo la linea sotto il link*/
+}
+
+
+/**MOSTRA CARRELLO**/
+.carrello{
+    width: 600px;
+    border: 5px solid #11468F;
+    border-radius: 5px;
+    background-color: #f0f6fd;
+    color: #040E3B;
+    margin: 40px 40px 40px 450px;
+    text-align: center;
+}
+
+.contenuto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.carrello b{
+    font-weight: bolder;
+}
+
+.carrello img{
+    width: 300px;
+    height: 300px;
+    padding: 80px 80px 20px 80px;
+    align-items: center;
+}
+
+.totale {
+    text-align: center;
+}
+
+
+/**ORDINI PASSATI **/
+.orpassati{
+    width: 500px;
+    border: 3px solid #11468F;
+    border-radius: 5px;
+    background-color: #f0f6fd;
+    color: #040E3B;
+    font-weight: bolder;
+    font-size: 15px;
+    text-align: center;
+    padding: 40px;
+    margin: 50px 10px 50px 550px;
+}
+
+.orpassati h1{
+    border: 2px solid #040E3B;
+    border-radius: 20px;
+    background-color: #040E3B;
+    color: #f0f6fd;
+    padding:20px;
+}
+
+.orpassati img{
+    width: 120px;
+    height: 150px;
+}
+
+/**metodi pagamenti salvati (pagamento)**/
+.metodi{
+    width: 500px;
+    border: 3px solid #11468F;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #040E3B;
+    margin: 60px 40px 60px 80px;
+    font-weight: bolder;
+    padding: 40px;
+    font-size: 15px;
+
+}
+
+
+/** (pagamento)  metodi salvati da selezionare **/
+.seleziona {
+    width: 700px;
+    border: 5px solid #11468F;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #040E3B;
+    margin: 40px 40px 40px 450px;
+    padding: 20px;
+}
+
+/*metodi pagamenti salvati*/
+
+.salvati{
+    width: 500px;
+    border: 3px solid #11468F;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #040E3B;
+    margin: 60px 40px 60px 520px;
+    font-weight: bolder;
+    padding: 40px;
+    font-size: 15px;
+
+}
+
+#cancella{
+    background-color: #11468F;
+    color: #f0f6fd;
+    padding: 7px;
+    border-color: #11468F;
+    font-weight: bold;
+}
+
+
+#cancella:hover{
+    background-color: #040E3B;
+    border-color: #040E3B;
+    font-weight: bold;
+}
+
+/**DAL CARRELLO AL PAGAMENTO (mostracarrello)**/
+
+#vaialpagamento{
+    background-color: #11468F;
+    color: #f0f6fd;
+}
+
+#vaialpagamento:hover{
+    background-color: #040E3B;
+    color: #f0f6fd;
+}
+
+#aggiornaquantità{
+    background-color: #11468F;
+    color: #f0f6fd;
+}
+
+#aggiornaquantità:hover{
+    background-color: #040E3B;
+    color: #f0f6fd;
+}
+
+
+/** (mostrapagamento) cancella metodo salvato**/
+#cancellametodo{
+    background-color: #11468F;
+    color: #f0f6fd;
+}
+
+#cancellametodo:hover{
+    background-color: #040E3B;
+    color: #f0f6fd;
+}
+
+
+/**div per admin: modifica e aggiunta prodotto**/
+.admin{
+    border: 4px solid #C41010;
+    border-radius: 5px;
+    background-color: #feeded;
+    color: #54070B;
+    font-weight: bold;
+    margin: 40px 40px 40px 450px;
+    padding: 20px 40px 20px 40px;
+    width: 700px;
+}
+
+#badmin{
+    background-color: #C41010;
+    color: #feeded;
+}
+
+#badmin:hover{
+    background-color: #54070B;
+    color: #feeded;
+}
+
+/**bottone invio ID prodotto da modificare (selezione prodotto)**/
+
+#modprodotto{
+    background-color: #C41010;
+    color: #feeded;
+}
+
+#modprodotto:hover{
+    background-color: #54070B;
+    color: #feeded;
+}
+
+/**bottone per modificare un prodotto (modifica prodotto)**/
+#modifica{
+    background-color: #C41010;
+    color: #feeded;
+}
+
+#modifica:hover{
+    background-color: #54070B;
+    color: #feeded;
+}
+
+ /**RICERCA PRODOTTO SBAGLIATO **/
+#nontrovato{
+    border: 4px solid #C41010;
+    border-radius: 5px;
+    background-color: #feeded;
+    color: #54070B;
+    font-weight: bold;
+    margin: 40px 40px 40px 450px;
+    padding: 20px 40px 20px 40px;
+    width: 700px;
+}
+
+.idsbagliato{
+    border: 4px solid #C41010;
+    border-radius: 5px;
+    background-color: #feeded;
+    color: #54070B;
+    font-weight: bold;
+    margin: 40px 40px 40px 450px;
+    padding: 20px 40px 20px 40px;
+    width: 700px;
+}
+
+ /** LOGIN SBAGLIATO **/
+.fa-face-frown{ /** faccina triste login sbagliato**/
+    color: #54070B;
+    font-size: 40px;
+}
+
+.credenziali{ /** credenziali sbagliate**/
+    width: 600px;
+    border: 5px solid #C41010;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #54070B;
+    margin: 40px 40px 40px 450px;
+    text-align: center;
+   padding:30px;
+}
+
+#nosmile{ /** nosmile link per tornare al login dopo credenziali sbagliate**/
+    color: #54070B;
+    font-weight: bolder;
+}
+
+#nosmile:hover{
+    color: #C41010;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/** i 3 cosi prima del footer**/
+.cosi{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 20px 30px 20px;
+    padding: 20px 260px;
+}
+
+.cosi i{
+    padding-bottom: 10px;
+}
+
+.cosi .fa-truck-fast{
+    color: #C41010;
+    margin-left: 60px;
+}
+
+.cosi .fa-credit-card{
+    color: #C41010;
+    margin-left: 100px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.cosi .fa-circle-question{
+    color: #C41010;
+    margin-left: 60px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.cosi h3{
+    color: #54070B;
+}
+
+
+/*footer*/
+.ft{
+    margin: 0;
+    padding: 20px 280px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #11468F;
+    color: #EEEEEE;
+}
+
+/*link all'indirizzo nel ft*/
+.ft a{
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+.ft a:hover{
+    padding: 0px 5px;
+    color: #11468F;
+    text-decoration: none;
+    background-color: #EEEEEE;
+}
+
+/*tolgo puntini alla lista nel ft*/
+.ft ul{
+    list-style-type: none;
+}
+
+/*caratteristica immagini nel ft*/
+.ft i{
+    margin-right: 10px;
+    padding: 10px 0px;
+}
+
+/*icona wa nel ft*/
+.fa-whatsapp{
+    font-size: 20px;
+    font-weight: bold;
+    color: lawngreen;
+}
+
+/*icona local nel ft*/
+.contatti .fa-location-dot{
+    color: red;
+}
+
+/*icona email nel ft*/
+.contatti .fa-envelope{
+    color: gold;
+}
+
+@media screen and (max-width: 900px) {
+    .row, #menu, .ft , .cosi, .prodotti {
+        flex-direction: column;
+    }}
+@media screen and (max-width: 900px) {
+    .ft , .cosi{
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .prodotti, .divisione{
+        display: list-item;
+    }}
+
+@media screen and (max-width: 900px) {
+    .carrello, .due, .registrazione, .metodi{
+        flex-direction: column;
+        margin: auto;
+        padding: 40px;
+    }}
+
+@media screen and (max-width: 1260px) {
+    .divisione{
+        display: list-item;
+    }}
+
+
