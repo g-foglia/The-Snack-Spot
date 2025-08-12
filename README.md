@@ -29,5 +29,5 @@ The application is structured according to the Model-View-Controller pattern. Th
 
 ## Authors
 - [Silvana Cafaro](https://github.com/zzzzilv)
-- [Isabella Maria Sessa](https://github.com/isaboutoftown)
+- [Isabella Maria Sessa](https://github.com/isabellasessa)
 - [Gennaro Foglia](https://github.com/g-foglia)
